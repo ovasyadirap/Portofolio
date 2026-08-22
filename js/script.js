@@ -5,7 +5,7 @@
    ========================================================================== */
 (function themeInit(){
   const root = document.documentElement;
-  const saved = localStorage.getItem('ar-theme');
+  const saved = localStorage.getItem('theme');
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const initial = saved || (prefersDark ? 'dark' : 'light');
   root.setAttribute('data-theme', initial);
@@ -15,7 +15,7 @@
     const current = root.getAttribute('data-theme');
     const next = current === 'dark' ? 'light' : 'dark';
     root.setAttribute('data-theme', next);
-    localStorage.setItem('ar-theme', next);
+    localStorage.setItem('theme', next);
   });
 })();
 
@@ -118,11 +118,11 @@
   const el = document.getElementById('typewriter');
   if (!el) return;
   const phrases = [
-    'Senior Systems Analyst',
-    'Enterprise Architect',
-    'Cloud Migration Lead',
-    'Process Automation Specialist',
-    'Data Strategy Consultant'
+    'Systems Analyst',
+    'UI/UX Designer',
+    'Junior System Analyst',
+    'IT Support Specialist',
+    'Machine Learning Enthusiast'
   ];
   let phraseIdx = 0, charIdx = 0, deleting = false;
 
@@ -206,173 +206,64 @@
    ========================================================================== */
 const PROJECTS = [
   {
-    id: 'core-banking',
-    category: 'architecture',
-    categoryLabel: 'Enterprise Architecture',
-    title: 'Core-Banking Platform Modernization',
-    desc: 'Re-architected a 20-year-old core-banking monolith into a modular, API-first platform spanning 12 business units.',
-    role: 'Lead Systems Analyst',
-    timeline: '14 months',
-    impact: '99.98% uptime, 40% faster releases',
-    tags: ['TOGAF', 'Microservices', 'API Gateway', 'Oracle'],
+    id: 'toast',
+    category: 'system-analysis',
+    categoryLabel: 'System Analysis',
+    title: 'TOAST — Two-Way Ticketing System',
+    desc: 'Designed the UML architecture and UI/UX prototypes for a digital ticketing platform built for Keraton Kasepuhan Cirebon.',
+    role: 'System Analyst & UI/UX Designer',
+    timeline: 'Jul 2024 – Jul 2025',
+    impact: 'Deployed for Keraton Kasepuhan Cirebon w/ PT Curaweda',
+    tags: ['UML', 'SRS', 'Figma', 'Admin Module'],
     grad: 'linear-gradient(135deg,#2f6fed,#6c4bff)',
-    icon: 'architecture'
+    icon: 'ticket'
   },
   {
-    id: 'ehr-migration',
-    category: 'data',
-    categoryLabel: 'Data & BI',
-    title: 'HIPAA-Compliant EHR Data Migration',
-    desc: 'Directed migration of patient records across a 40-site hospital network with zero data-integrity incidents.',
-    role: 'Data Migration Analyst',
-    timeline: '9 months',
-    impact: '68% faster record retrieval',
-    tags: ['HIPAA', 'ETL', 'SQL Server', 'Data Governance'],
-    grad: 'linear-gradient(135deg,#17c3b2,#2f6fed)',
-    icon: 'data'
-  },
-  {
-    id: 'bi-dashboard',
-    category: 'data',
-    categoryLabel: 'Data & BI',
-    title: 'Enterprise BI &amp; Reporting Suite'.replace('&amp;','&'),
-    desc: 'Built a unified Power BI reporting layer consolidating 14 disparate data sources into real-time executive dashboards.',
-    role: 'BI Systems Analyst',
-    timeline: '5 months',
-    impact: '$380K annual reporting savings',
-    tags: ['Power BI', 'DAX', 'Data Warehouse', 'SSAS'],
-    grad: 'linear-gradient(135deg,#f59e0b,#ef4444)',
-    icon: 'chart'
-  },
-  {
-    id: 'cloud-migration',
-    category: 'cloud',
-    categoryLabel: 'Cloud Infrastructure',
-    title: 'Multi-Region AWS Cloud Migration',
-    desc: 'Migrated on-prem infrastructure for a logistics network to a multi-region AWS architecture with automated failover.',
-    role: 'Cloud Solutions Analyst',
-    timeline: '11 months',
-    impact: '35% infra cost reduction',
-    tags: ['AWS', 'Terraform', 'Kubernetes', 'CI/CD'],
-    grad: 'linear-gradient(135deg,#0ea5e9,#22d3ee)',
-    icon: 'cloud'
-  },
-  {
-    id: 'disaster-recovery',
-    category: 'cloud',
-    categoryLabel: 'Cloud Infrastructure',
-    title: 'Disaster Recovery &amp; Business Continuity'.replace('&amp;','&'),
-    desc: 'Designed a cross-region DR strategy with automated backups and a tested RTO of under 15 minutes.',
-    role: 'Infrastructure Analyst',
-    timeline: '4 months',
-    impact: 'RTO reduced from 6h to 15m',
-    tags: ['Azure', 'Backup Automation', 'Runbooks'],
-    grad: 'linear-gradient(135deg,#22d3ee,#17c3b2)',
-    icon: 'shield'
-  },
-  {
-    id: 'rpa-finance',
-    category: 'automation',
-    categoryLabel: 'Process Automation',
-    title: 'Finance Operations RPA Rollout',
-    desc: 'Automated invoice reconciliation and month-end close workflows across finance and procurement teams.',
-    role: 'Automation Analyst',
-    timeline: '6 months',
-    impact: '4,200 manual hours saved / yr',
-    tags: ['RPA', 'Python', 'REST APIs', 'Workflow'],
-    grad: 'linear-gradient(135deg,#a855f7,#6c4bff)',
-    icon: 'automation'
-  },
-  {
-    id: 'warehouse-tracking',
-    category: 'automation',
-    categoryLabel: 'Process Automation',
-    title: 'Warehouse &amp; Fleet Tracking System'.replace('&amp;','&'),
-    desc: 'Designed a real-time inventory and fleet-tracking system replacing manual spreadsheets across 18 warehouses.',
-    role: 'Business Systems Analyst',
-    timeline: '8 months',
-    impact: '$1.2M annual overhead cut',
-    tags: ['IoT', 'PostgreSQL', 'Dashboards', 'Scripting'],
-    grad: 'linear-gradient(135deg,#f97316,#f59e0b)',
-    icon: 'truck'
-  },
-  {
-    id: 'soc2-audit',
-    category: 'security',
-    categoryLabel: 'Security & Compliance',
-    title: 'SOC 2 Type II Readiness Program',
-    desc: 'Led a company-wide SOC 2 readiness initiative, mapping controls, closing gaps and preparing audit evidence.',
-    role: 'Security & Compliance Analyst',
-    timeline: '5 months',
-    impact: 'Passed audit, zero exceptions',
-    tags: ['SOC 2', 'Risk Assessment', 'IAM', 'Policy'],
-    grad: 'linear-gradient(135deg,#ef4444,#f97316)',
-    icon: 'security'
-  },
-  {
-    id: 'iam-overhaul',
-    category: 'security',
-    categoryLabel: 'Security & Compliance',
-    title: 'Enterprise Identity &amp; Access Overhaul'.replace('&amp;','&'),
-    desc: 'Consolidated fragmented identity systems into a unified SSO / IAM model with role-based access control.',
-    role: 'Security Systems Analyst',
-    timeline: '7 months',
-    impact: '60% fewer access-related tickets',
-    tags: ['SSO', 'RBAC', 'Okta', 'Active Directory'],
-    grad: 'linear-gradient(135deg,#6c4bff,#ef4444)',
-    icon: 'key'
-  },
-  {
-    id: 'erp-rollout',
-    category: 'architecture',
-    categoryLabel: 'Enterprise Architecture',
-    title: 'Global ERP Rollout & Integration',
-    desc: 'Managed requirements and integration architecture for a phased SAP rollout across five country operations.',
-    role: 'Lead Business Analyst',
-    timeline: '18 months',
-    impact: 'On-time, on-budget across 5 sites',
-    tags: ['SAP', 'Integration', 'Change Mgmt', 'UML'],
-    grad: 'linear-gradient(135deg,#2f6fed,#17c3b2)',
-    icon: 'architecture'
-  },
-  {
-    id: 'data-lake',
-    category: 'data',
-    categoryLabel: 'Data & BI',
-    title: 'Enterprise Data Lake Foundation',
-    desc: 'Architected a governed data lake on Azure to unify analytics across marketing, sales and operations.',
-    role: 'Data Architecture Analyst',
-    timeline: '10 months',
-    impact: '3x faster analytics turnaround',
-    tags: ['Azure Data Lake', 'Data Governance', 'Spark'],
+    id: 'waste-management',
+    category: 'iot',
+    categoryLabel: 'IoT & Smart Systems',
+    title: 'Smart Waste Management System',
+    desc: 'Analyzed system requirements and simulated Raspberry Pi and camera placement for an AI-based (YOLO) waste classification system.',
+    role: 'Data & System Analyst',
+    timeline: '2024 – 2025',
+    impact: 'Automated waste-sorting prototype for Smart Environment research',
+    tags: ['YOLO', 'Raspberry Pi', 'IoT', 'Requirements Analysis'],
     grad: 'linear-gradient(135deg,#17c3b2,#0ea5e9)',
-    icon: 'data'
+    icon: 'iot'
   },
   {
-    id: 'incident-response',
-    category: 'security',
-    categoryLabel: 'Security & Compliance',
-    title: 'Incident Response Framework',
-    desc: 'Built an incident classification, escalation and response framework adopted across the technology org.',
-    role: 'Security Analyst',
-    timeline: '3 months',
-    impact: 'Mean response time cut 55%',
-    tags: ['ISO 27001', 'Runbooks', 'SIEM'],
-    grad: 'linear-gradient(135deg,#ef4444,#a855f7)',
-    icon: 'shield'
+    id: 'tanela',
+    category: 'ml',
+    categoryLabel: 'Machine Learning',
+    title: 'TANELA — Tanah Sejahtera',
+    desc: 'Built the data model and system documentation for a machine-learning app classifying soil suitability for BPP Selaawi, Garut.',
+    role: 'Machine Learning & System Analyst',
+    timeline: 'Student Creativity Program (PKM-PI)',
+    impact: 'Funded national student research program',
+    tags: ['Machine Learning', 'Data Modeling', 'Documentation'],
+    grad: 'linear-gradient(135deg,#22c55e,#84cc16)',
+    icon: 'ml'
+  },
+  {
+    id: 'uiux-competition',
+    category: 'uiux',
+    categoryLabel: 'UI/UX Design',
+    title: 'National UI/UX Design Competition',
+    desc: 'Designed a mobile app prototype using Design Thinking and UX principles for a social-impact problem statement.',
+    role: 'UI/UX Designer',
+    timeline: 'Nov 2024',
+    impact: '2nd Place — Universitas Sebelas Maret (UNS), national level',
+    tags: ['Design Thinking', 'Figma', 'Prototyping'],
+    grad: 'linear-gradient(135deg,#f59e0b,#ef4444)',
+    icon: 'trophy'
   }
 ];
 
 const ICONS = {
-  architecture: '<path d="M4 5h16v10H4z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9 20h6M12 15v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>',
-  data: '<ellipse cx="12" cy="6" rx="7.5" ry="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 6v6c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3V6M4.5 12v6c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3v-6" fill="none" stroke="currentColor" stroke-width="1.6"/>',
-  chart: '<path d="M4 19V5m5 14v-9m5 9V9m5 10V4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>',
-  cloud: '<path d="M7 17.5a4.5 4.5 0 0 1-.5-8.97A5.5 5.5 0 0 1 17.4 8.1 4 4 0 0 1 17 16H7Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>',
-  shield: '<path d="M12 3 4 7v5c0 4.6 3.2 7.6 8 9 4.8-1.4 8-4.4 8-9V7l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>',
-  automation: '<path d="M8 9l-4 3 4 3m8-6 4 3-4 3M13.5 5 10.5 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>',
-  truck: '<path d="M3 6h11v10H3zM14 10h4l3 3v3h-7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="7.5" cy="18" r="1.7" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="18" r="1.7" fill="none" stroke="currentColor" stroke-width="1.6"/>',
-  security: '<path d="M12 3 4 7v5c0 4.6 3.2 7.6 8 9 4.8-1.4 8-4.4 8-9V7l-8-4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>',
-  key: '<circle cx="8" cy="15" r="3.4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m10.4 12.6 8.1-8.1M16 6l2 2M18.5 3.5l2 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>'
+  ticket: '<path d="M4 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4V8Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 6v12" stroke="currentColor" stroke-width="1.6" stroke-dasharray="2 2"/>',
+  iot: '<rect x="7" y="7" width="10" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9 3v4M15 3v4M9 17v4M15 17v4M3 9h4M3 15h4M17 9h4M17 15h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>',
+  ml: '<path d="M12 21c0-6 4-9 8-10-1 6-4 9-8 10Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 21c0-6-4-9-8-10 1 6 4 9 8 10Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>',
+  trophy: '<path d="M8 4h8v4a4 4 0 0 1-8 0V4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 5H5v2a3 3 0 0 0 3 3M16 5h3v2a3 3 0 0 1-3 3M10 15h4v3h-4zM8 20h8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>'
 };
 
 (function gallery(){
@@ -384,7 +275,7 @@ const ICONS = {
     return `
       <article class="g-card reveal in-view" data-category="${p.category}" data-id="${p.id}" tabindex="0" role="button" aria-haspopup="dialog">
         <div class="g-thumb" style="--grad:${p.grad}">
-          <svg viewBox="0 0 24 24">${ICONS[p.icon] || ICONS.architecture}</svg>
+          <svg viewBox="0 0 24 24">${ICONS[p.icon] || ICONS.ticket}</svg>
           <span class="g-view">
             <svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2.6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
             View Details
@@ -407,10 +298,10 @@ const ICONS = {
     const p = PROJECTS.find(x => x.id === id);
     if (!p) return;
     document.getElementById('modalThumb').style.setProperty('--grad', p.grad);
-    document.getElementById('modalThumb').innerHTML = `<svg viewBox="0 0 24 24">${ICONS[p.icon] || ICONS.architecture}</svg>`;
+    document.getElementById('modalThumb').innerHTML = `<svg viewBox="0 0 24 24">${ICONS[p.icon] || ICONS.ticket}</svg>`;
     document.getElementById('modalCategory').textContent = p.categoryLabel;
     document.getElementById('modalTitle').textContent = p.title;
-    document.getElementById('modalDesc').textContent = p.desc + ' This engagement involved close collaboration with stakeholders across the organization, structured discovery, and a phased rollout designed to minimize operational risk.';
+    document.getElementById('modalDesc').textContent = p.desc;
     document.getElementById('modalRole').textContent = p.role;
     document.getElementById('modalTimeline').textContent = p.timeline;
     document.getElementById('modalImpact').textContent = p.impact;
@@ -531,7 +422,7 @@ const ICONS = {
     // No backend is wired up — this opens the visitor's email client with the
     // message pre-filled, addressed to the contact email below. Replace this
     // with a real API/Formspree/EmailJS call to submit silently instead.
-    const to = 'contact@alexanderreed.dev';
+    const to = 'ovasyadira.p@gmail.com';
     const subject = encodeURIComponent(`[Portfolio] ${values.subject}`);
     const body = encodeURIComponent(
       `Name: ${values.name}\nEmail: ${values.email}\n\n${values.message}`
