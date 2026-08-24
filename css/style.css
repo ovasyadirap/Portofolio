@@ -345,7 +345,7 @@ input,textarea{ font-family:inherit; }
   position:relative; height:180px; display:flex; align-items:center; justify-content:center;
   background:var(--grad, var(--accent-grad)); overflow:hidden;
 }
-.g-thumb svg{ width:56px; height:56px; color:rgba(255,255,255,.92); position:relative; z-index:1; }
+.g-thumb .g-scene{ width:100%; height:100%; position:relative; z-index:1; }
 .g-thumb::before{
   content:''; position:absolute; inset:0;
   background-image:radial-gradient(rgba(255,255,255,.35) 1.4px, transparent 1.4px);

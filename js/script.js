@@ -118,9 +118,9 @@
   const el = document.getElementById('typewriter');
   if (!el) return;
   const phrases = [
+    'Head of IT',
     'Systems Analyst',
     'UI/UX Designer',
-    'Junior System Analyst',
     'IT Support Specialist',
     'Machine Learning Enthusiast'
   ];
@@ -206,6 +206,21 @@
    ========================================================================== */
 const PROJECTS = [
   {
+    id: 'primaland',
+    category: 'system-analysis',
+    categoryLabel: 'System Analysis',
+    title: 'Primaland Digital Transformation',
+    desc: 'Leading system analysis and project management across Primaland’s flagship initiatives — the MyCozyKos application, cross-divisional system integration, an investor-facing fintech platform, and AI-based dynamic pricing for Villa Hirai Hills.',
+    role: 'Head of IT — System Analyst & Project Manager',
+    timeline: 'Mar 2026 — Present',
+    impact: 'Unified platform spanning MyCozyKos, finance & AI pricing',
+    tags: ['MyCozyKos', 'System Integration', 'FinTech', 'AI Pricing'],
+    grad: 'linear-gradient(135deg,#6c4bff,#ec4899)',
+    accent: '#6c4bff',
+    chip: 'IT',
+    icon: 'hub'
+  },
+  {
     id: 'toast',
     category: 'system-analysis',
     categoryLabel: 'System Analysis',
@@ -216,6 +231,8 @@ const PROJECTS = [
     impact: 'Deployed for Keraton Kasepuhan Cirebon w/ PT Curaweda',
     tags: ['UML', 'SRS', 'Figma', 'Admin Module'],
     grad: 'linear-gradient(135deg,#2f6fed,#6c4bff)',
+    accent: '#2f6fed',
+    chip: 'UML',
     icon: 'ticket'
   },
   {
@@ -229,6 +246,8 @@ const PROJECTS = [
     impact: 'Automated waste-sorting prototype for Smart Environment research',
     tags: ['YOLO', 'Raspberry Pi', 'IoT', 'Requirements Analysis'],
     grad: 'linear-gradient(135deg,#17c3b2,#0ea5e9)',
+    accent: '#0ea5e9',
+    chip: 'AI',
     icon: 'iot'
   },
   {
@@ -242,6 +261,8 @@ const PROJECTS = [
     impact: 'Funded national student research program',
     tags: ['Machine Learning', 'Data Modeling', 'Documentation'],
     grad: 'linear-gradient(135deg,#22c55e,#84cc16)',
+    accent: '#22c55e',
+    chip: 'ML',
     icon: 'ml'
   },
   {
@@ -255,6 +276,8 @@ const PROJECTS = [
     impact: '2nd Place — Universitas Sebelas Maret (UNS), national level',
     tags: ['Design Thinking', 'Figma', 'Prototyping'],
     grad: 'linear-gradient(135deg,#f59e0b,#ef4444)',
+    accent: '#f59e0b',
+    chip: 'UI',
     icon: 'trophy'
   }
 ];
@@ -263,19 +286,45 @@ const ICONS = {
   ticket: '<path d="M4 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4V8Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 6v12" stroke="currentColor" stroke-width="1.6" stroke-dasharray="2 2"/>',
   iot: '<rect x="7" y="7" width="10" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9 3v4M15 3v4M9 17v4M15 17v4M3 9h4M3 15h4M17 9h4M17 15h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>',
   ml: '<path d="M12 21c0-6 4-9 8-10-1 6-4 9-8 10Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 21c0-6-4-9-8-10 1 6 4 9 8 10Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>',
-  trophy: '<path d="M8 4h8v4a4 4 0 0 1-8 0V4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 5H5v2a3 3 0 0 0 3 3M16 5h3v2a3 3 0 0 1-3 3M10 15h4v3h-4zM8 20h8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>'
+  trophy: '<path d="M8 4h8v4a4 4 0 0 1-8 0V4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 5H5v2a3 3 0 0 0 3 3M16 5h3v2a3 3 0 0 1-3 3M10 15h4v3h-4zM8 20h8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>',
+  hub: '<circle cx="12" cy="12" r="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="5" cy="6" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="19" cy="6" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="5" cy="18" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="19" cy="18" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9.8 10.2 6.6 7.6M14.2 10.2l3.2-2.6M9.8 13.8l-3.2 2.6M14.2 13.8l3.2 2.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>'
 };
+
+const DEFAULT_ACCENT = '#2f6fed';
 
 (function gallery(){
   const galleryEl = document.getElementById('gallery');
   const filterBar = document.getElementById('filterBar');
   if (!galleryEl) return;
 
+  function sceneSVG(p){
+    const accent = p.accent || DEFAULT_ACCENT;
+    const chip = p.chip || '';
+    const icon = ICONS[p.icon] || ICONS.ticket;
+    return `
+      <svg class="g-scene" viewBox="0 0 220 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+        <rect x="26" y="16" width="168" height="96" rx="12" fill="rgba(255,255,255,.14)" stroke="rgba(255,255,255,.35)" stroke-width="1.2"/>
+        <circle cx="40" cy="30" r="3" fill="rgba(255,255,255,.55)"/>
+        <circle cx="50" cy="30" r="3" fill="rgba(255,255,255,.4)"/>
+        <circle cx="60" cy="30" r="3" fill="rgba(255,255,255,.25)"/>
+        <rect x="40" y="46" width="86" height="7" rx="3.5" fill="rgba(255,255,255,.45)"/>
+        <rect x="40" y="60" width="120" height="7" rx="3.5" fill="rgba(255,255,255,.26)"/>
+        <rect x="40" y="74" width="64" height="7" rx="3.5" fill="rgba(255,255,255,.26)"/>
+        <rect x="40" y="88" width="96" height="7" rx="3.5" fill="rgba(255,255,255,.18)"/>
+        ${chip ? `<g>
+          <rect x="158" y="9" width="40" height="22" rx="11" fill="rgba(255,255,255,.94)"/>
+          <text x="178" y="24" text-anchor="middle" font-family="Sora, sans-serif" font-size="10" font-weight="700" fill="${accent}">${chip}</text>
+        </g>` : ''}
+        <circle cx="172" cy="98" r="27" fill="#ffffff"/>
+        <g style="color:${accent}" transform="translate(156,82) scale(1.35)">${icon}</g>
+      </svg>`;
+  }
+
   function cardHTML(p){
     return `
       <article class="g-card reveal in-view" data-category="${p.category}" data-id="${p.id}" tabindex="0" role="button" aria-haspopup="dialog">
         <div class="g-thumb" style="--grad:${p.grad}">
-          <svg viewBox="0 0 24 24">${ICONS[p.icon] || ICONS.ticket}</svg>
+          ${sceneSVG(p)}
           <span class="g-view">
             <svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2.6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
             View Details
