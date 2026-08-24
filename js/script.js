@@ -309,20 +309,30 @@ const DEFAULT_ACCENT = '#2f6fed';
     const icon = ICONS[p.icon] || ICONS.ticket;
     return `
       <svg class="g-scene" viewBox="0 0 220 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-        <rect x="26" y="16" width="168" height="96" rx="12" fill="rgba(255,255,255,.14)" stroke="rgba(255,255,255,.35)" stroke-width="1.2"/>
-        <circle cx="40" cy="30" r="3" fill="rgba(255,255,255,.55)"/>
-        <circle cx="50" cy="30" r="3" fill="rgba(255,255,255,.4)"/>
-        <circle cx="60" cy="30" r="3" fill="rgba(255,255,255,.25)"/>
-        <rect x="40" y="46" width="86" height="7" rx="3.5" fill="rgba(255,255,255,.45)"/>
-        <rect x="40" y="60" width="120" height="7" rx="3.5" fill="rgba(255,255,255,.26)"/>
-        <rect x="40" y="74" width="64" height="7" rx="3.5" fill="rgba(255,255,255,.26)"/>
-        <rect x="40" y="88" width="96" height="7" rx="3.5" fill="rgba(255,255,255,.18)"/>
+        <!-- monitor / screen -->
+        <rect x="30" y="10" width="160" height="76" rx="10" fill="rgba(255,255,255,.14)" stroke="rgba(255,255,255,.35)" stroke-width="1.2"/>
+        <circle cx="44" cy="23" r="2.6" fill="rgba(255,255,255,.55)"/>
+        <circle cx="53" cy="23" r="2.6" fill="rgba(255,255,255,.4)"/>
+        <circle cx="62" cy="23" r="2.6" fill="rgba(255,255,255,.25)"/>
+        <rect x="44" y="34" width="80" height="6.5" rx="3.2" fill="rgba(255,255,255,.45)"/>
+        <rect x="44" y="47" width="112" height="6.5" rx="3.2" fill="rgba(255,255,255,.26)"/>
+        <rect x="44" y="60" width="58" height="6.5" rx="3.2" fill="rgba(255,255,255,.26)"/>
+        <rect x="44" y="73" width="90" height="6.5" rx="3.2" fill="rgba(255,255,255,.18)"/>
+
+        <!-- desk -->
+        <rect x="14" y="119" width="192" height="6" rx="3" fill="rgba(255,255,255,.3)"/>
+        <rect x="96" y="113" width="30" height="6" rx="2" fill="rgba(255,255,255,.5)"/>
+
+        <!-- person, seen from behind, at the desk -->
+        <path d="M83 122 Q83 93 110 93 Q137 93 137 122 Z" fill="rgba(255,255,255,.94)"/>
+        <circle cx="110" cy="79" r="13.5" fill="rgba(255,255,255,.94)"/>
+
         ${chip ? `<g>
           <rect x="158" y="9" width="40" height="22" rx="11" fill="rgba(255,255,255,.94)"/>
           <text x="178" y="24" text-anchor="middle" font-family="Sora, sans-serif" font-size="10" font-weight="700" fill="${accent}">${chip}</text>
         </g>` : ''}
-        <circle cx="172" cy="98" r="27" fill="#ffffff"/>
-        <g style="color:${accent}" transform="translate(156,82) scale(1.35)">${icon}</g>
+        <circle cx="187" cy="112" r="23" fill="#ffffff"/>
+        <g style="color:${accent}" transform="translate(174,99) scale(1.1)">${icon}</g>
       </svg>`;
   }
 
