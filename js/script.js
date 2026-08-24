@@ -223,6 +223,23 @@ const PROJECTS = [
     photoPosition: 'center'
   },
   {
+    id: 'primaland-fintech',
+    category: 'system-analysis',
+    categoryLabel: 'System Analysis',
+    title: 'Primaland FinTech Platform',
+    desc: 'Designed the investor-facing fintech platform for Primaland — real-time investment tracking, portfolio dashboards, and financial reporting built for stakeholder transparency.',
+    role: 'Head of IT — System Analyst & Project Manager',
+    timeline: 'Mar 2026 — Present',
+    impact: 'Real-time investment dashboard for Primaland investors',
+    tags: ['FinTech', 'Investment Dashboard', 'Financial Reporting'],
+    grad: 'linear-gradient(135deg,#0d9488,#22d3ee)',
+    accent: '#0d9488',
+    chip: 'FIN',
+    icon: 'growth',
+    photo: 'assets/img/projects/fintech.jpg',
+    photoPosition: 'center'
+  },
+  {
     id: 'toast',
     category: 'system-analysis',
     categoryLabel: 'System Analysis',
@@ -297,7 +314,8 @@ const ICONS = {
   iot: '<rect x="7" y="7" width="10" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9 3v4M15 3v4M9 17v4M15 17v4M3 9h4M3 15h4M17 9h4M17 15h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>',
   ml: '<path d="M12 21c0-6 4-9 8-10-1 6-4 9-8 10Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 21c0-6-4-9-8-10 1 6 4 9 8 10Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>',
   trophy: '<path d="M8 4h8v4a4 4 0 0 1-8 0V4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 5H5v2a3 3 0 0 0 3 3M16 5h3v2a3 3 0 0 1-3 3M10 15h4v3h-4zM8 20h8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>',
-  hub: '<circle cx="12" cy="12" r="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="5" cy="6" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="19" cy="6" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="5" cy="18" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="19" cy="18" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9.8 10.2 6.6 7.6M14.2 10.2l3.2-2.6M9.8 13.8l-3.2 2.6M14.2 13.8l3.2 2.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>'
+  hub: '<circle cx="12" cy="12" r="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="5" cy="6" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="19" cy="6" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="5" cy="18" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="19" cy="18" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9.8 10.2 6.6 7.6M14.2 10.2l3.2-2.6M9.8 13.8l-3.2 2.6M14.2 13.8l3.2 2.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>',
+  growth: '<path d="M4 4v16h16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="m7 15 3.5-4 3 2.5L18 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.5 8H18v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>'
 };
 
 const DEFAULT_ACCENT = '#2f6fed';
