@@ -346,12 +346,19 @@ input,textarea{ font-family:inherit; }
   background:var(--grad, var(--accent-grad)); overflow:hidden;
 }
 .g-thumb .g-scene{ width:100%; height:100%; position:relative; z-index:1; }
+.g-thumb .g-photo{ width:100%; height:100%; object-fit:cover; position:relative; z-index:0; display:block; }
+.g-thumb .g-photochip{
+  position:absolute; top:12px; right:12px; z-index:2; background:rgba(255,255,255,.94);
+  font-size:.72rem; font-weight:700; padding:5px 12px; border-radius:999px; font-family:var(--font-head);
+}
 .g-thumb::before{
   content:''; position:absolute; inset:0;
   background-image:radial-gradient(rgba(255,255,255,.35) 1.4px, transparent 1.4px);
   background-size:18px 18px; opacity:.5;
 }
+.g-thumb.has-photo::before{ display:none; }
 .g-thumb::after{ content:''; position:absolute; inset:0; background:linear-gradient(180deg, transparent 40%, rgba(0,0,0,.28) 100%); }
+.g-thumb.has-photo::after{ background:linear-gradient(180deg, rgba(0,0,0,.05) 0%, rgba(0,0,0,.4) 100%); }
 .g-view{
   position:absolute; bottom:12px; right:12px; z-index:2; display:flex; align-items:center; gap:6px;
   background:rgba(255,255,255,.92); color:#141827; font-size:.72rem; font-weight:700; padding:6px 10px; border-radius:999px;
@@ -461,9 +468,10 @@ input,textarea{ font-family:inherit; }
 .modal-overlay.open .modal{ transform:translateY(0) scale(1); }
 .modal-thumb{
   height:200px; background:var(--grad, var(--accent-grad)); position:relative;
-  display:flex; align-items:center; justify-content:center;
+  display:flex; align-items:center; justify-content:center; overflow:hidden;
 }
 .modal-thumb svg{ width:64px; height:64px; color:rgba(255,255,255,.92); }
+.modal-thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
 .modal-close{
   position:absolute; top:16px; right:16px; width:36px; height:36px; border-radius:50%;
   background:rgba(255,255,255,.92); color:#141827; border:none; font-size:1.4rem; line-height:1;

@@ -248,7 +248,9 @@ const PROJECTS = [
     grad: 'linear-gradient(135deg,#17c3b2,#0ea5e9)',
     accent: '#0ea5e9',
     chip: 'AI',
-    icon: 'iot'
+    icon: 'iot',
+    photo: 'assets/img/projects/waste-management.jpg',
+    photoPosition: 'center 40%'
   },
   {
     id: 'tanela',
@@ -263,7 +265,9 @@ const PROJECTS = [
     grad: 'linear-gradient(135deg,#22c55e,#84cc16)',
     accent: '#22c55e',
     chip: 'ML',
-    icon: 'ml'
+    icon: 'ml',
+    photo: 'assets/img/projects/tanela.png',
+    photoPosition: 'center top'
   },
   {
     id: 'uiux-competition',
@@ -278,7 +282,9 @@ const PROJECTS = [
     grad: 'linear-gradient(135deg,#f59e0b,#ef4444)',
     accent: '#f59e0b',
     chip: 'UI',
-    icon: 'trophy'
+    icon: 'trophy',
+    photo: 'assets/img/projects/uiux-competition.jpg',
+    photoPosition: 'center 30%'
   }
 ];
 
@@ -320,11 +326,20 @@ const DEFAULT_ACCENT = '#2f6fed';
       </svg>`;
   }
 
+  function photoHTML(p){
+    const accent = p.accent || DEFAULT_ACCENT;
+    const chip = p.chip || '';
+    const pos = p.photoPosition || 'center';
+    return `
+      <img class="g-photo" src="${p.photo}" alt="${p.title}" loading="lazy" style="object-position:${pos}">
+      ${chip ? `<span class="g-photochip" style="color:${accent}">${chip}</span>` : ''}`;
+  }
+
   function cardHTML(p){
     return `
       <article class="g-card reveal in-view" data-category="${p.category}" data-id="${p.id}" tabindex="0" role="button" aria-haspopup="dialog">
-        <div class="g-thumb" style="--grad:${p.grad}">
-          ${sceneSVG(p)}
+        <div class="g-thumb${p.photo ? ' has-photo' : ''}" style="--grad:${p.grad}">
+          ${p.photo ? photoHTML(p) : sceneSVG(p)}
           <span class="g-view">
             <svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2.6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
             View Details
@@ -346,8 +361,12 @@ const DEFAULT_ACCENT = '#2f6fed';
   function openModal(id){
     const p = PROJECTS.find(x => x.id === id);
     if (!p) return;
-    document.getElementById('modalThumb').style.setProperty('--grad', p.grad);
-    document.getElementById('modalThumb').innerHTML = `<svg viewBox="0 0 24 24">${ICONS[p.icon] || ICONS.ticket}</svg>`;
+    const modalThumb = document.getElementById('modalThumb');
+    modalThumb.style.setProperty('--grad', p.grad);
+    modalThumb.classList.toggle('has-photo', !!p.photo);
+    modalThumb.innerHTML = p.photo
+      ? `<img src="${p.photo}" alt="${p.title}" style="object-position:${p.photoPosition || 'center'}">`
+      : `<svg viewBox="0 0 24 24">${ICONS[p.icon] || ICONS.ticket}</svg>`;
     document.getElementById('modalCategory').textContent = p.categoryLabel;
     document.getElementById('modalTitle').textContent = p.title;
     document.getElementById('modalDesc').textContent = p.desc;
