@@ -505,6 +505,10 @@ const DEFAULT_ACCENT = '#2f6fed';
     });
   });
 
+  // Formspree endpoint — submissions are emailed straight to the inbox
+  // registered on that Formspree form. No visitor-side email client needed.
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xaeywjdo';
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     const { valid, values } = validate();
@@ -519,23 +523,43 @@ const DEFAULT_ACCENT = '#2f6fed';
     submitBtn.disabled = true;
     submitBtn.querySelector('.btn-label').textContent = 'Sending...';
 
-    // No backend is wired up — this opens the visitor's email client with the
-    // message pre-filled, addressed to the contact email below. Replace this
-    // with a real API/Formspree/EmailJS call to submit silently instead.
-    const to = 'ovasyadira.p@gmail.com';
-    const subject = encodeURIComponent(`[Portfolio] ${values.subject}`);
-    const body = encodeURIComponent(
-      `Name: ${values.name}\nEmail: ${values.email}\n\n${values.message}`
-    );
+    const genericError = 'Something went wrong. Please try again or email me directly.';
 
-    setTimeout(() => {
-      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
-      submitBtn.disabled = false;
-      submitBtn.querySelector('.btn-label').textContent = 'Send Message';
-      note.textContent = 'Your email client should now open with the message ready to send.';
-      note.classList.add('success');
-      form.reset();
-    }, 500);
+    fetch(FORMSPREE_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    })
+      .then(response => {
+        if (response.ok) {
+          note.textContent = 'Thanks! Your message has been sent — I\'ll get back to you soon.';
+          note.classList.add('success');
+          form.reset();
+          return;
+        }
+        // Formspree returned an error response — try to surface its detail,
+        // falling back to a generic message if the body isn't the shape we expect.
+        return response.json()
+          .catch(() => null)
+          .then(data => {
+            const detail = (data && data.errors && data.errors.length)
+              ? data.errors.map(err => err.message).join(', ')
+              : genericError;
+            throw new Error(detail);
+          });
+      })
+      .catch(err => {
+        // A thrown Error above carries our own message; anything else (network
+        // failure, CORS, offline) is a raw browser/fetch error — show generic text.
+        note.textContent = err instanceof Error && err.message && err.message !== 'Failed to fetch'
+          ? err.message
+          : genericError;
+        note.classList.add('error');
+      })
+      .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.querySelector('.btn-label').textContent = 'Send Message';
+      });
   });
 })();
 
