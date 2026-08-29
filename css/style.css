@@ -376,12 +376,14 @@ input,textarea{ font-family:inherit; }
 [data-theme="dark"] .g-tags span{ background:var(--bg); }
 
 /* ---------- Achievements ---------- */
-.testimonial-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:26px; }
+.testimonial-grid{ display:grid; grid-template-columns:repeat(2, 1fr); gap:26px; }
 .achievement-card{
   background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg);
-  padding:28px; box-shadow:var(--shadow-sm); transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  overflow:hidden; box-shadow:var(--shadow-sm); transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
 }
 .achievement-card:hover{ transform:translateY(-6px); box-shadow:var(--shadow-md); border-color:color-mix(in srgb, var(--accent) 40%, var(--border)); }
+.achievement-card:not(.has-photo){ display:flex; align-items:center; }
+.achievement-body{ padding:28px; }
 .achievement-icon{
   width:48px; height:48px; border-radius:14px; display:grid; place-items:center; margin-bottom:16px;
   background:var(--accent-soft); color:var(--accent);
@@ -390,6 +392,16 @@ input,textarea{ font-family:inherit; }
 .achievement-card h3{ font-size:1.02rem; margin-bottom:8px; }
 .achievement-org{ display:block; font-size:.78rem; font-weight:600; color:var(--text-soft); margin-bottom:12px; }
 .achievement-card p{ font-size:.9rem; margin-bottom:0; }
+
+.achievement-photo{ position:relative; display:block; aspect-ratio:16/9; overflow:hidden; background:var(--bg-alt); }
+.achievement-photo img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform .4s ease; }
+.achievement-photo-view{
+  position:absolute; inset:auto 0 0 0; padding:10px 14px; font-size:.78rem; font-weight:600; color:#fff;
+  background:linear-gradient(0deg, rgba(0,0,0,.72), rgba(0,0,0,0)); opacity:0; transform:translateY(6px);
+  transition:opacity .25s ease, transform .25s ease;
+}
+.achievement-photo:hover img{ transform:scale(1.05); }
+.achievement-photo:hover .achievement-photo-view{ opacity:1; transform:translateY(0); }
 
 /* ---------- Contact ---------- */
 .contact-grid{ display:grid; grid-template-columns:.85fr 1.15fr; gap:56px; }
