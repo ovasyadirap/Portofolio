@@ -280,7 +280,7 @@ const PROJECTS = [
     category: 'ml',
     categoryLabel: 'Machine Learning',
     title: 'TANELA — Tanah Sejahtera',
-    desc: 'Built the data model and system documentation for a machine-learning app classifying soil suitability for BPP Selaawi, Garut.',
+    desc: 'Built the data model and system documentation for a machine-learning web app that predicts land suitability for shallot farming in Selaawi sub-district, Garut, developed with BPP Selaawi.',
     role: 'Machine Learning & System Analyst',
     timeline: 'Student Creativity Program (PKM-PI)',
     impact: 'Funded national student research program',
@@ -290,7 +290,12 @@ const PROJECTS = [
     chip: 'ML',
     icon: 'ml',
     photo: 'assets/img/projects/tanela.jpg',
-    photoPosition: 'center'
+    photoPosition: 'center',
+    docs: [
+      { src: 'assets/img/projects/docs/tanela-web-app.jpg', caption: 'Web app landing page — land suitability classification for Selaawi', w: 614, h: 426 },
+      { src: 'assets/img/projects/docs/tanela-field-crops.jpg', caption: 'Field documentation — planted crop plot', w: 335, h: 446, pos: 'center 45%' },
+      { src: 'assets/img/projects/docs/tanela-field-plot.jpg', caption: 'Field documentation — prepared land plot with markers', w: 538, h: 403 }
+    ]
   },
   {
     id: 'uiux-competition',
@@ -428,7 +433,7 @@ const DEFAULT_ACCENT = '#2f6fed';
           <h3>${p.title}</h3>
           <p>${p.desc}</p>
           <div class="g-tags">${p.tags.map(t => `<span>${t}</span>`).join('')}</div>
-          ${p.docs && p.docs.length ? `<span class="g-docs">📷 ${p.docs.length} real photos inside</span>` : ''}
+          ${p.docs && p.docs.length ? `<span class="g-docs">📷 Includes real documentation (${p.docs.length})</span>` : ''}
         </div>
       </article>`;
   }
