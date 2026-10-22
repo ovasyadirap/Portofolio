@@ -332,6 +332,27 @@ const DETAILS = [
       { src: 'assets/img/achievements/ta-certificate.jpg', caption: 'Assistant certificate, rated “Sangat Memuaskan”', w: 1000, h: 707 }
     ]
   }
+,
+  {
+    id: 'lab-assistant',
+    categoryLabel: 'IT Support',
+    title: 'Laboratory Assistant — IT Support',
+    desc: 'Part-time laboratory assistant at the Multimedia Applied Game and Education Lab, Faculty of Applied Science, Telkom University. Managed the lab’s network, IoT and software inventory, and resolved hardware, software and network issues across 40+ lab PCs so practicum sessions could run. The faculty rated the assistantship “Sangat Baik” (Very Good).',
+    role: 'Laboratory Assistant (part-time)',
+    timeline: 'Jun 2023 — Aug 2024',
+    impact: '40+ lab PCs kept running; rated “Very Good”',
+    tags: ['Troubleshooting', 'Inventory', 'Networking', 'OS Imaging'],
+    grad: 'linear-gradient(135deg,#2f6fed,#6c4bff)',
+    photo: 'assets/img/achievements/docs/lab-pc-check.jpg',
+    photoPosition: 'center 40%',
+    docs: [
+      { src: 'assets/img/achievements/docs/lab-pc-check.jpg', caption: 'Checking lab PCs', w: 1400, h: 1054 },
+      { src: 'assets/img/achievements/docs/lab-room-setup.jpg', caption: 'Preparing a lab room — PCs and LAN cabling', w: 1400, h: 1054 },
+      { src: 'assets/img/achievements/docs/lab-software-check.jpg', caption: 'Software check on a lab PC', w: 787, h: 1400, pos: 'center 62%' },
+      { src: 'assets/img/achievements/docs/lab-assistant-team.jpg', caption: 'Laboratory assistant team', w: 1079, h: 631 },
+      { src: 'assets/img/achievements/lab-devices.jpg', caption: 'Assistant certificate, rated “Sangat Baik”', w: 1100, h: 1555, pos: 'center 42%' }
+    ]
+  }
 ];
 
 const ICONS = {
@@ -436,7 +457,7 @@ const DEFAULT_ACCENT = '#2f6fed';
     if (p.docs && p.docs.length) {
       docsEl.innerHTML = `<h4>Documentation</h4><div class="modal-docs-grid">${p.docs.map(d => `
         <a href="${d.src}" target="_blank" rel="noopener" class="modal-doc">
-          <img src="${d.src}" alt="${d.caption}" loading="lazy" width="${d.w}" height="${d.h}">
+          <img src="${d.src}" alt="${d.caption}" loading="lazy" width="${d.w}" height="${d.h}" style="object-position:${d.pos || 'center'}">
           <span>${d.caption}</span>
         </a>`).join('')}</div>`;
       docsEl.hidden = false;
