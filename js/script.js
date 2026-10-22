@@ -304,6 +304,7 @@ const PROJECTS = [
   },
   {
     id: 'uiux-competition',
+    hidden: true, // shown in Achievements instead
     category: 'uiux',
     categoryLabel: 'UI/UX Design',
     title: 'National UI/UX Design Competition',
@@ -460,7 +461,7 @@ const DEFAULT_ACCENT = '#2f6fed';
       </article>`;
   }
 
-  galleryEl.innerHTML = PROJECTS.map(cardHTML).join('');
+  galleryEl.innerHTML = PROJECTS.filter(p => !p.hidden).map(cardHTML).join('');
 
   const cards = Array.from(galleryEl.querySelectorAll('.g-card'));
 
