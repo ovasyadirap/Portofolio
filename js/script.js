@@ -119,8 +119,7 @@
   if (!el) return;
   const phrases = [
     'System Analyst',
-    'Business Analyst',
-    'UI/UX Designer'
+    'Business Analyst'
   ];
   let phraseIdx = 0, charIdx = 0, deleting = false;
 
