@@ -311,6 +311,29 @@ const PROJECTS = [
   }
 ];
 
+/* Detail entries opened from the Achievements section (not shown as gallery cards) */
+const DETAILS = [
+  {
+    id: 'ta-algo',
+    categoryLabel: 'Teaching',
+    title: 'Teaching Assistant — Algorithm and Programming',
+    desc: 'Practicum assistant for Algorithm and Programming at the Faculty of Applied Science, Telkom University. Prepared learning materials, explained programming logic to 30+ students, and helped lecturers evaluate practical assignments. The faculty rated the assistantship “Sangat Memuaskan” (Very Satisfactory).',
+    role: 'Teaching Assistant (part-time)',
+    timeline: 'Odd Semester 2024/2025',
+    impact: '30+ students mentored; rated “Very Satisfactory”',
+    tags: ['Learning Materials', 'Mentoring', 'Assessment'],
+    grad: 'linear-gradient(135deg,#2f6fed,#17c3b2)',
+    photo: 'assets/img/achievements/docs/ta-class.jpg',
+    photoPosition: 'center 45%',
+    docs: [
+      { src: 'assets/img/achievements/docs/ta-practicum.jpg', caption: 'Practicum session in the faculty lab', w: 1400, h: 1054 },
+      { src: 'assets/img/achievements/docs/ta-class.jpg', caption: 'End-of-semester photo with the class', w: 1400, h: 1050 },
+      { src: 'assets/img/achievements/docs/faculty-booth.jpg', caption: 'D3 Information Systems booth at a Telkom University campus event', w: 1400, h: 788 },
+      { src: 'assets/img/achievements/ta-certificate.jpg', caption: 'Assistant certificate, rated “Sangat Memuaskan”', w: 1000, h: 707 }
+    ]
+  }
+];
+
 const ICONS = {
   ticket: '<path d="M4 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4V8Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 6v12" stroke="currentColor" stroke-width="1.6" stroke-dasharray="2 2"/>',
   iot: '<rect x="7" y="7" width="10" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9 3v4M15 3v4M9 17v4M15 17v4M3 9h4M3 15h4M17 9h4M17 15h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>',
@@ -394,7 +417,7 @@ const DEFAULT_ACCENT = '#2f6fed';
   const cards = Array.from(galleryEl.querySelectorAll('.g-card'));
 
   function openModal(id){
-    const p = PROJECTS.find(x => x.id === id);
+    const p = PROJECTS.concat(DETAILS).find(x => x.id === id);
     if (!p) return;
     const modalThumb = document.getElementById('modalThumb');
     modalThumb.style.setProperty('--grad', p.grad);
