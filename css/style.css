@@ -200,6 +200,7 @@ input,textarea{ font-family:inherit; }
 
 .hero-stats{ display:grid; grid-template-columns:repeat(4,auto); gap:32px; }
 .stat{ display:flex; flex-direction:column; }
+.stat-value{ display:flex; align-items:baseline; }
 .stat-num{ font-family:var(--font-head); font-size:1.9rem; font-weight:800; color:var(--text); display:inline; }
 .stat-suffix{ font-family:var(--font-head); font-size:1.9rem; font-weight:800; color:var(--text); }
 .stat-label{ font-size:.8rem; color:var(--text-soft); margin-top:2px; }

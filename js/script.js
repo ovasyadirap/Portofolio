@@ -118,11 +118,9 @@
   const el = document.getElementById('typewriter');
   if (!el) return;
   const phrases = [
-    'Head of IT',
-    'Systems Analyst',
-    'UI/UX Designer',
-    'IT Support Specialist',
-    'Machine Learning Enthusiast'
+    'System Analyst',
+    'Business Analyst',
+    'UI/UX Designer'
   ];
   let phraseIdx = 0, charIdx = 0, deleting = false;
 
@@ -209,34 +207,34 @@ const PROJECTS = [
     id: 'primaland',
     category: 'system-analysis',
     categoryLabel: 'System Analysis',
-    title: 'Primaland Digital Transformation',
-    desc: 'Leading system analysis and project management across Primaland’s flagship initiatives — the MyCozyKos application, cross-divisional system integration, an investor-facing fintech platform, and AI-based dynamic pricing for Villa Hirai Hills.',
-    role: 'Head of IT — System Analyst & Project Manager',
+    title: 'Primaland — Multi-Project System Analysis',
+    desc: 'Sole in-house system analyst across 4 concurrent projects: the MyCozyKos boarding-house platform, Villa Hirai Hills website redesign and AI dynamic pricing, and a cross-division finance budgeting integration. I turn division needs into requirements, wireframes and UAT scenarios for PrimaTech’s 5-person development team.',
+    role: 'System Analyst',
     timeline: 'Mar 2026 — Present',
-    impact: 'Unified platform spanning MyCozyKos, finance & AI pricing',
-    tags: ['MyCozyKos', 'System Integration', 'FinTech', 'AI Pricing'],
+    impact: '4 projects running in parallel; Cozy Mart module delivered',
+    tags: ['Requirements', 'Wireframes', 'UAT', 'Executive Reporting'],
     grad: 'linear-gradient(135deg,#6c4bff,#ec4899)',
     accent: '#6c4bff',
-    chip: 'IT',
+    chip: 'SA',
     icon: 'hub',
     photo: 'assets/img/projects/primaland.jpg',
     photoPosition: 'center'
   },
   {
-    id: 'primaland-fintech',
+    id: 'primaland-inventory',
     category: 'system-analysis',
     categoryLabel: 'System Analysis',
-    title: 'Primaland FinTech Platform',
-    desc: 'Designed the investor-facing fintech platform for Primaland — real-time investment tracking, portfolio dashboards, and financial reporting built for stakeholder transparency.',
-    role: 'Head of IT — System Analyst & Project Manager',
-    timeline: 'Mar 2026 — Present',
-    impact: 'Real-time investment dashboard for Primaland investors',
-    tags: ['FinTech', 'Investment Dashboard', 'Financial Reporting'],
+    title: 'Inventory Management System — Operations Division',
+    desc: 'Built from scratch for Primaland’s Operations division, from requirements to a live system. It tracks every asset with a photo, acquisition value and depreciation-based book value, filters by division, location and status, records sold items, and exports to Excel.',
+    role: 'System Analyst (end to end)',
+    timeline: '2026',
+    impact: 'Live and tracking 95 company assets',
+    tags: ['Requirements', 'Asset Depreciation', 'Dashboard', 'Excel Export'],
     grad: 'linear-gradient(135deg,#0d9488,#22d3ee)',
     accent: '#0d9488',
-    chip: 'FIN',
+    chip: 'INV',
     icon: 'growth',
-    photo: 'assets/img/projects/fintech.jpg',
+    photo: 'assets/img/projects/inventory.jpg',
     photoPosition: 'center'
   },
   {
