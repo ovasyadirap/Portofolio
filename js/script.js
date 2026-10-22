@@ -308,17 +308,21 @@ const PROJECTS = [
     category: 'uiux',
     categoryLabel: 'UI/UX Design',
     title: 'National UI/UX Design Competition',
-    desc: 'Designed a mobile app prototype using Design Thinking and UX principles for a social-impact problem statement.',
-    role: 'UI/UX Designer',
+    desc: 'Designed a mobile app prototype using Design Thinking and UX principles for a social-impact problem statement, competing as a team in the UI/UX competition of Vocation of The Champions 2024, organised by Sekolah Vokasi, Universitas Sebelas Maret.',
+    role: 'UI/UX Designer (team member)',
     timeline: 'Nov 2024',
-    impact: '2nd Place — Universitas Sebelas Maret (UNS), national level',
+    impact: '2nd Place — Vocation of The Champions 2024, Sekolah Vokasi UNS',
     tags: ['Design Thinking', 'Figma', 'Prototyping'],
     grad: 'linear-gradient(135deg,#f59e0b,#ef4444)',
     accent: '#f59e0b',
     chip: 'UI',
     icon: 'trophy',
     photo: 'assets/img/projects/uiux-competition.jpg',
-    photoPosition: 'center'
+    photoPosition: 'center',
+    docs: [
+      { src: 'assets/img/achievements/uiux-award-certificate.jpg', caption: 'Award certificate — 2nd place, issued to the team by Sekolah Vokasi UNS', w: 1353, h: 980 },
+      { src: 'assets/img/achievements/uiux-certificate.jpg', caption: 'The team at the Vocation of The Champions 2024 grand closing', w: 1100, h: 1466, pos: 'center 25%' }
+    ]
   }
 ];
 
