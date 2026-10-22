@@ -269,7 +269,7 @@ const PROJECTS = [
     chip: 'AI',
     icon: 'iot',
     photo: 'assets/img/projects/waste-management.jpg',
-    photoPosition: 'center 40%'
+    photoPosition: 'center'
   },
   {
     id: 'tanela',
