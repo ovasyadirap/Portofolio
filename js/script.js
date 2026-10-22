@@ -372,7 +372,7 @@ const DETAILS = [
     photo: 'assets/img/achievements/docs/coe-smart-city-team.jpg',
     photoPosition: 'center 54%',
     docs: [
-      { src: 'assets/img/achievements/docs/coe-smart-city-team.jpg', caption: 'CoE Smart City 2024/25 team, Telkom University (photo: Jonas Photo 2025)', w: 1400, h: 1050 }
+      { src: 'assets/img/achievements/docs/coe-smart-city-team.jpg', caption: 'CoE Smart City 2024/25 team, Telkom University', w: 1400, h: 1050 }
     ]
   }
 ];
