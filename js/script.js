@@ -118,11 +118,8 @@
   const el = document.getElementById('typewriter');
   if (!el) return;
   const phrases = [
-    'Head of IT',
-    'Systems Analyst',
-    'UI/UX Designer',
-    'IT Support Specialist',
-    'Machine Learning Enthusiast'
+    'System Analyst',
+    'Business Analyst'
   ];
   let phraseIdx = 0, charIdx = 0, deleting = false;
 
@@ -209,34 +206,34 @@ const PROJECTS = [
     id: 'primaland',
     category: 'system-analysis',
     categoryLabel: 'System Analysis',
-    title: 'Primaland Digital Transformation',
-    desc: 'Leading system analysis and project management across Primaland’s flagship initiatives — the MyCozyKos application, cross-divisional system integration, an investor-facing fintech platform, and AI-based dynamic pricing for Villa Hirai Hills.',
-    role: 'Head of IT — System Analyst & Project Manager',
+    title: 'PT Primaland — Multi-Project System Analysis',
+    desc: '4 concurrent projects: Mycozykos platform, Hirai Hills website and AI pricing, finance budgeting. Requirements, wireframes and UAT for a 5-person vendor team.',
+    role: 'System Analyst',
     timeline: 'Mar 2026 — Present',
-    impact: 'Unified platform spanning MyCozyKos, finance & AI pricing',
-    tags: ['MyCozyKos', 'System Integration', 'FinTech', 'AI Pricing'],
+    impact: '4 projects running in parallel; Cozy Mart module delivered',
+    tags: ['Requirements', 'Wireframes', 'UAT', 'Executive Reporting'],
     grad: 'linear-gradient(135deg,#6c4bff,#ec4899)',
     accent: '#6c4bff',
-    chip: 'IT',
+    chip: 'SA',
     icon: 'hub',
     photo: 'assets/img/projects/primaland.jpg',
     photoPosition: 'center'
   },
   {
-    id: 'primaland-fintech',
+    id: 'primaland-inventory',
     category: 'system-analysis',
     categoryLabel: 'System Analysis',
-    title: 'Primaland FinTech Platform',
-    desc: 'Designed the investor-facing fintech platform for Primaland — real-time investment tracking, portfolio dashboards, and financial reporting built for stakeholder transparency.',
-    role: 'Head of IT — System Analyst & Project Manager',
-    timeline: 'Mar 2026 — Present',
-    impact: 'Real-time investment dashboard for Primaland investors',
-    tags: ['FinTech', 'Investment Dashboard', 'Financial Reporting'],
+    title: 'Inventory Management System — Operations Division',
+    desc: 'Built from scratch for the Operations division: asset photos, depreciation-based book value, division and location filters, Excel export.',
+    role: 'System Analyst (end to end)',
+    timeline: '2026',
+    impact: 'Live and tracking 95 company assets',
+    tags: ['Requirements', 'Asset Depreciation', 'Dashboard', 'Excel Export'],
     grad: 'linear-gradient(135deg,#0d9488,#22d3ee)',
     accent: '#0d9488',
-    chip: 'FIN',
+    chip: 'INV',
     icon: 'growth',
-    photo: 'assets/img/projects/fintech.jpg',
+    photo: 'assets/img/projects/inventory.jpg',
     photoPosition: 'center'
   },
   {
@@ -244,41 +241,50 @@ const PROJECTS = [
     category: 'system-analysis',
     categoryLabel: 'System Analysis',
     title: 'TOAST — Two-Way Ticketing System',
-    desc: 'Designed the UML architecture and UI/UX prototypes for a digital ticketing platform built for Keraton Kasepuhan Cirebon.',
+    desc: 'On-site requirement gathering at Keraton Kasepuhan Cirebon, turned into UML and UI/UX prototypes. Built with PT Curaweda.',
     role: 'System Analyst & UI/UX Designer',
     timeline: 'Jul 2024 – Jul 2025',
     impact: 'Deployed for Keraton Kasepuhan Cirebon w/ PT Curaweda',
-    tags: ['UML', 'SRS', 'Figma', 'Admin Module'],
+    tags: ['Requirements Gathering', 'UML', 'SRS', 'Figma'],
     grad: 'linear-gradient(135deg,#2f6fed,#6c4bff)',
     accent: '#2f6fed',
     chip: 'UML',
     icon: 'ticket',
     photo: 'assets/img/projects/toast.jpg',
-    photoPosition: 'center'
+    photoPosition: 'center',
+    docs: [
+      { src: 'assets/img/projects/docs/toast-keraton-visit.jpg', caption: 'Requirement-gathering visit to Keraton Kasepuhan Cirebon, with Pangeran Nusantara', w: 1400, h: 788 },
+      { src: 'assets/img/projects/docs/toast-staff-interview.jpg', caption: 'Requirement interview with Keraton staff', w: 1400, h: 788 },
+      { src: 'assets/img/projects/docs/toast-analysis-session.jpg', caption: 'Requirement analysis session at CoE Smart City', w: 1400, h: 1050 }
+    ]
   },
   {
     id: 'waste-management',
     category: 'iot',
     categoryLabel: 'IoT & Smart Systems',
     title: 'Smart Waste Management System',
-    desc: 'Analyzed system requirements and simulated Raspberry Pi and camera placement for an AI-based (YOLO) waste classification system.',
-    role: 'Data & System Analyst',
+    desc: 'Requirements and Raspberry Pi camera placement for a YOLO waste classifier. Demoed at the Telkom University × CIT international short course.',
+    role: 'Data & System Analyst · Supervisor Assistant',
     timeline: '2024 – 2025',
-    impact: 'Automated waste-sorting prototype for Smart Environment research',
+    impact: 'Live object-detection demo with international participants',
     tags: ['YOLO', 'Raspberry Pi', 'IoT', 'Requirements Analysis'],
     grad: 'linear-gradient(135deg,#17c3b2,#0ea5e9)',
     accent: '#0ea5e9',
     chip: 'AI',
     icon: 'iot',
     photo: 'assets/img/projects/waste-management.jpg',
-    photoPosition: 'center 40%'
+    photoPosition: 'center',
+    docs: [
+      { src: 'assets/img/projects/docs/waste-live-demo.jpg', caption: 'Live detection demo on the Raspberry Pi camera feed', w: 1400, h: 788 },
+      { src: 'assets/img/projects/docs/short-course-team.jpg', caption: 'Team with participants and lecturers of the international short course', w: 1400, h: 1050 }
+    ]
   },
   {
     id: 'tanela',
     category: 'ml',
     categoryLabel: 'Machine Learning',
     title: 'TANELA — Tanah Sejahtera',
-    desc: 'Built the data model and system documentation for a machine-learning app classifying soil suitability for BPP Selaawi, Garut.',
+    desc: 'Data model and documentation for an ML app predicting land suitability for shallot farming in Selaawi, Garut.',
     role: 'Machine Learning & System Analyst',
     timeline: 'Student Creativity Program (PKM-PI)',
     impact: 'Funded national student research program',
@@ -288,24 +294,95 @@ const PROJECTS = [
     chip: 'ML',
     icon: 'ml',
     photo: 'assets/img/projects/tanela.jpg',
-    photoPosition: 'center'
+    photoPosition: 'center',
+    docs: [
+      { src: 'assets/img/projects/docs/tanela-web-app.jpg', caption: 'Web app landing page — land suitability classification for Selaawi', w: 614, h: 426 },
+      { src: 'assets/img/projects/docs/tanela-field-crops.jpg', caption: 'Field documentation — planted crop plot', w: 335, h: 446, pos: 'center 45%' },
+      { src: 'assets/img/projects/docs/tanela-field-plot.jpg', caption: 'Field documentation — prepared land plot with markers', w: 538, h: 403 }
+    ]
   },
   {
     id: 'uiux-competition',
+    hidden: true, // shown in Achievements instead
     category: 'uiux',
     categoryLabel: 'UI/UX Design',
     title: 'National UI/UX Design Competition',
-    desc: 'Designed a mobile app prototype using Design Thinking and UX principles for a social-impact problem statement.',
-    role: 'UI/UX Designer',
+    desc: 'Mobile app prototype built with Design Thinking. 2nd place, Vocation of The Champions 2024, Sekolah Vokasi UNS.',
+    role: 'UI/UX Designer (team member)',
     timeline: 'Nov 2024',
-    impact: '2nd Place — Universitas Sebelas Maret (UNS), national level',
+    impact: '2nd Place — Vocation of The Champions 2024, Sekolah Vokasi UNS',
     tags: ['Design Thinking', 'Figma', 'Prototyping'],
     grad: 'linear-gradient(135deg,#f59e0b,#ef4444)',
     accent: '#f59e0b',
     chip: 'UI',
     icon: 'trophy',
     photo: 'assets/img/projects/uiux-competition.jpg',
-    photoPosition: 'center'
+    photoPosition: 'center',
+    docs: [
+      { src: 'assets/img/achievements/uiux-award-certificate.jpg', caption: 'Award certificate — 2nd place, issued to the team by Sekolah Vokasi UNS', w: 1353, h: 980 },
+      { src: 'assets/img/achievements/uiux-certificate.jpg', caption: 'The team at the Vocation of The Champions 2024 grand closing', w: 1100, h: 1466, pos: 'center 25%' }
+    ]
+  }
+];
+
+/* Detail entries opened from the Achievements section (not shown as gallery cards) */
+const DETAILS = [
+  {
+    id: 'ta-algo',
+    categoryLabel: 'Teaching',
+    title: 'Teaching Assistant — Algorithm and Programming',
+    desc: 'Practicum assistant for Algorithm and Programming. Prepared materials, mentored 30+ students and helped grade assignments. Rated “Sangat Memuaskan”.',
+    role: 'Teaching Assistant (part-time)',
+    timeline: 'Odd Semester 2024/2025',
+    impact: '30+ students mentored; rated “Very Satisfactory”',
+    tags: ['Learning Materials', 'Mentoring', 'Assessment'],
+    grad: 'linear-gradient(135deg,#2f6fed,#17c3b2)',
+    photo: 'assets/img/achievements/docs/ta-class.jpg',
+    photoPosition: 'center 45%',
+    docs: [
+      { src: 'assets/img/achievements/docs/ta-practicum.jpg', caption: 'Practicum session in the faculty lab', w: 1400, h: 1054 },
+      { src: 'assets/img/achievements/docs/ta-class.jpg', caption: 'End-of-semester photo with the class', w: 1400, h: 1050 },
+      { src: 'assets/img/achievements/docs/faculty-booth.jpg', caption: 'D3 Information Systems booth at a Telkom University campus event', w: 1400, h: 788 },
+      { src: 'assets/img/achievements/ta-certificate.jpg', caption: 'Assistant certificate, rated “Sangat Memuaskan”', w: 1000, h: 707 }
+    ]
+  }
+,
+  {
+    id: 'lab-assistant',
+    categoryLabel: 'IT Support',
+    title: 'Laboratory Assistant — IT Support',
+    desc: 'Part-time assistant at the Multimedia Applied Game & Education Lab. Kept 40+ PCs running; managed network, IoT and software inventory. Rated “Sangat Baik”.',
+    role: 'Laboratory Assistant (part-time)',
+    timeline: 'Jun 2023 — Aug 2024',
+    impact: '40+ lab PCs kept running; rated “Very Good”',
+    tags: ['Troubleshooting', 'Inventory', 'Networking', 'OS Imaging'],
+    grad: 'linear-gradient(135deg,#2f6fed,#6c4bff)',
+    photo: 'assets/img/achievements/docs/lab-pc-check.jpg',
+    photoPosition: 'center 40%',
+    docs: [
+      { src: 'assets/img/achievements/docs/lab-pc-check.jpg', caption: 'Checking lab PCs', w: 1400, h: 1054 },
+      { src: 'assets/img/achievements/docs/lab-room-setup.jpg', caption: 'Preparing a lab room — PCs and LAN cabling', w: 1400, h: 1054 },
+      { src: 'assets/img/achievements/docs/lab-software-check.jpg', caption: 'Software check on a lab PC', w: 787, h: 1400, pos: 'center 62%' },
+      { src: 'assets/img/achievements/docs/lab-assistant-team.jpg', caption: 'Laboratory assistant team', w: 1079, h: 631 },
+      { src: 'assets/img/achievements/lab-devices.jpg', caption: 'Assistant certificate, rated “Sangat Baik”', w: 1100, h: 1555, pos: 'center 42%' }
+    ]
+  }
+,
+  {
+    id: 'coe-internship',
+    categoryLabel: 'Internship',
+    title: 'Intern — Junior System Analyst, CoE Smart City',
+    desc: 'One-year internship (2024/25). On-site requirement gathering, UML and documentation for TOAST; UI/UX prototypes for its admin and finance modules; requirements for an IoT waste classifier.',
+    role: 'Junior System Analyst (intern)',
+    timeline: 'Jul 2024 — Jul 2025',
+    impact: 'Documentation and prototypes for TOAST; IoT waste-sorting analysis',
+    tags: ['UML', 'Technical Documentation', 'Figma', 'Requirements Analysis'],
+    grad: 'linear-gradient(135deg,#2f6fed,#6c4bff)',
+    photo: 'assets/img/achievements/docs/coe-smart-city-team.jpg',
+    photoPosition: 'center 54%',
+    docs: [
+      { src: 'assets/img/achievements/docs/coe-smart-city-team.jpg', caption: 'CoE Smart City 2024/25 team, Telkom University', w: 1400, h: 1050 }
+    ]
   }
 ];
 
@@ -382,16 +459,17 @@ const DEFAULT_ACCENT = '#2f6fed';
           <h3>${p.title}</h3>
           <p>${p.desc}</p>
           <div class="g-tags">${p.tags.map(t => `<span>${t}</span>`).join('')}</div>
+          ${p.docs && p.docs.length ? `<span class="g-docs">📷 Documentation (${p.docs.length})</span>` : ''}
         </div>
       </article>`;
   }
 
-  galleryEl.innerHTML = PROJECTS.map(cardHTML).join('');
+  galleryEl.innerHTML = PROJECTS.filter(p => !p.hidden).map(cardHTML).join('');
 
   const cards = Array.from(galleryEl.querySelectorAll('.g-card'));
 
   function openModal(id){
-    const p = PROJECTS.find(x => x.id === id);
+    const p = PROJECTS.concat(DETAILS).find(x => x.id === id);
     if (!p) return;
     const modalThumb = document.getElementById('modalThumb');
     modalThumb.style.setProperty('--grad', p.grad);
@@ -406,6 +484,18 @@ const DEFAULT_ACCENT = '#2f6fed';
     document.getElementById('modalTimeline').textContent = p.timeline;
     document.getElementById('modalImpact').textContent = p.impact;
     document.getElementById('modalTags').innerHTML = p.tags.map(t => `<span>${t}</span>`).join('');
+    const docsEl = document.getElementById('modalDocs');
+    if (p.docs && p.docs.length) {
+      docsEl.innerHTML = `<h4>Documentation</h4><div class="modal-docs-grid">${p.docs.map(d => `
+        <a href="${d.src}" target="_blank" rel="noopener" class="modal-doc">
+          <img src="${d.src}" alt="${d.caption}" loading="lazy" width="${d.w}" height="${d.h}" style="object-position:${d.pos || 'center'}">
+          <span>${d.caption}</span>
+        </a>`).join('')}</div>`;
+      docsEl.hidden = false;
+    } else {
+      docsEl.innerHTML = '';
+      docsEl.hidden = true;
+    }
 
     const overlay = document.getElementById('modalOverlay');
     overlay.classList.add('open');
@@ -421,6 +511,13 @@ const DEFAULT_ACCENT = '#2f6fed';
     card.addEventListener('click', () => openModal(card.dataset.id));
     card.addEventListener('keydown', e => {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(card.dataset.id); }
+    });
+  });
+
+  document.querySelectorAll('[data-open-project]').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      openModal(link.dataset.openProject);
     });
   });
 

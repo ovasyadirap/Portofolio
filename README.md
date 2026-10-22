@@ -7,9 +7,9 @@ A professional, interactive single-page portfolio website built with plain HTML,
 
 - **Hero section** with a portrait photo, animated typewriter role titles, and live-counted stats
 - **About** section with bio, highlights and a quick-facts card
-- **Skills** grid with animated proficiency bars (System Analysis, UI/UX Design, Web Programming,
-  Database Management, Network & PC Maintenance, Interpersonal & Leadership)
-- **Experience timeline** — internships, teaching assistant, and lab assistant roles
+- **Skills** grid grouped like the CV (Business & System Analysis, Testing & Delivery, Database & SQL,
+  Tools, Web & Prototyping, Domain Experience)
+- **Experience timeline** — current role at Primaland, internships, and part-time campus roles
 - **Work gallery** with category filters (System Analysis, UI/UX Design, IoT & Smart Systems,
   Machine Learning) and a details modal per project
 - **Achievements** section (competition placements, mentoring, IT support milestones)
