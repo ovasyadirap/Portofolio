@@ -259,17 +259,21 @@ const PROJECTS = [
     category: 'iot',
     categoryLabel: 'IoT & Smart Systems',
     title: 'Smart Waste Management System',
-    desc: 'Analyzed system requirements and simulated Raspberry Pi and camera placement for an AI-based (YOLO) waste classification system.',
-    role: 'Data & System Analyst',
+    desc: 'Analyzed system requirements and simulated Raspberry Pi and camera placement for an AI-based (YOLO) waste classification system. The prototype was part of the Telkom University × Coimbatore Institute of Technology international short course (January 2025), where I served as Supervisor Assistant.',
+    role: 'Data & System Analyst · Supervisor Assistant',
     timeline: '2024 – 2025',
-    impact: 'Automated waste-sorting prototype for Smart Environment research',
+    impact: 'Live object-detection demo with international participants',
     tags: ['YOLO', 'Raspberry Pi', 'IoT', 'Requirements Analysis'],
     grad: 'linear-gradient(135deg,#17c3b2,#0ea5e9)',
     accent: '#0ea5e9',
     chip: 'AI',
     icon: 'iot',
     photo: 'assets/img/projects/waste-management.jpg',
-    photoPosition: 'center'
+    photoPosition: 'center',
+    docs: [
+      { src: 'assets/img/projects/docs/waste-live-demo.jpg', caption: 'Live detection demo on the Raspberry Pi camera feed', w: 1400, h: 788 },
+      { src: 'assets/img/projects/docs/short-course-team.jpg', caption: 'Team with participants and lecturers of the international short course', w: 1400, h: 1050 }
+    ]
   },
   {
     id: 'tanela',
@@ -380,6 +384,7 @@ const DEFAULT_ACCENT = '#2f6fed';
           <h3>${p.title}</h3>
           <p>${p.desc}</p>
           <div class="g-tags">${p.tags.map(t => `<span>${t}</span>`).join('')}</div>
+          ${p.docs && p.docs.length ? `<span class="g-docs">📷 ${p.docs.length} real photos inside</span>` : ''}
         </div>
       </article>`;
   }
@@ -404,6 +409,18 @@ const DEFAULT_ACCENT = '#2f6fed';
     document.getElementById('modalTimeline').textContent = p.timeline;
     document.getElementById('modalImpact').textContent = p.impact;
     document.getElementById('modalTags').innerHTML = p.tags.map(t => `<span>${t}</span>`).join('');
+    const docsEl = document.getElementById('modalDocs');
+    if (p.docs && p.docs.length) {
+      docsEl.innerHTML = `<h4>Documentation</h4><div class="modal-docs-grid">${p.docs.map(d => `
+        <a href="${d.src}" target="_blank" rel="noopener" class="modal-doc">
+          <img src="${d.src}" alt="${d.caption}" loading="lazy" width="${d.w}" height="${d.h}">
+          <span>${d.caption}</span>
+        </a>`).join('')}</div>`;
+      docsEl.hidden = false;
+    } else {
+      docsEl.innerHTML = '';
+      docsEl.hidden = true;
+    }
 
     const overlay = document.getElementById('modalOverlay');
     overlay.classList.add('open');
@@ -419,6 +436,13 @@ const DEFAULT_ACCENT = '#2f6fed';
     card.addEventListener('click', () => openModal(card.dataset.id));
     card.addEventListener('keydown', e => {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(card.dataset.id); }
+    });
+  });
+
+  document.querySelectorAll('[data-open-project]').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      openModal(link.dataset.openProject);
     });
   });
 
