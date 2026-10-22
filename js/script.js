@@ -358,6 +358,23 @@ const DETAILS = [
       { src: 'assets/img/achievements/lab-devices.jpg', caption: 'Assistant certificate, rated “Sangat Baik”', w: 1100, h: 1555, pos: 'center 42%' }
     ]
   }
+,
+  {
+    id: 'coe-internship',
+    categoryLabel: 'Internship',
+    title: 'Intern — Junior System Analyst, CoE Smart City',
+    desc: 'One-year internship at the Center of Excellence Smart City, Telkom University (2024/2025 cohort). Produced UML diagrams and technical documentation for TOAST, a two-way ticketing system for Keraton Kasepuhan Cirebon built with PT Curaweda, designed UI/UX prototypes for its admin and financial modules, and analyzed requirements for an IoT-based waste classification system.',
+    role: 'Junior System Analyst (intern)',
+    timeline: 'Jul 2024 — Jul 2025',
+    impact: 'Documentation and prototypes for TOAST; IoT waste-sorting analysis',
+    tags: ['UML', 'Technical Documentation', 'Figma', 'Requirements Analysis'],
+    grad: 'linear-gradient(135deg,#2f6fed,#6c4bff)',
+    photo: 'assets/img/achievements/docs/coe-smart-city-team.jpg',
+    photoPosition: 'center 54%',
+    docs: [
+      { src: 'assets/img/achievements/docs/coe-smart-city-team.jpg', caption: 'CoE Smart City 2024/25 team, Telkom University (photo: Jonas Photo 2025)', w: 1400, h: 1050 }
+    ]
+  }
 ];
 
 const ICONS = {
