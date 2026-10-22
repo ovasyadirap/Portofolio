@@ -242,17 +242,22 @@ const PROJECTS = [
     category: 'system-analysis',
     categoryLabel: 'System Analysis',
     title: 'TOAST — Two-Way Ticketing System',
-    desc: 'Designed the UML architecture and UI/UX prototypes for a digital ticketing platform built for Keraton Kasepuhan Cirebon.',
+    desc: 'Gathered requirements on site at Keraton Kasepuhan Cirebon through stakeholder meetings and staff interviews, then turned them into the UML architecture and UI/UX prototypes for a digital ticketing platform built with PT Curaweda.',
     role: 'System Analyst & UI/UX Designer',
     timeline: 'Jul 2024 – Jul 2025',
     impact: 'Deployed for Keraton Kasepuhan Cirebon w/ PT Curaweda',
-    tags: ['UML', 'SRS', 'Figma', 'Admin Module'],
+    tags: ['Requirements Gathering', 'UML', 'SRS', 'Figma'],
     grad: 'linear-gradient(135deg,#2f6fed,#6c4bff)',
     accent: '#2f6fed',
     chip: 'UML',
     icon: 'ticket',
     photo: 'assets/img/projects/toast.jpg',
-    photoPosition: 'center'
+    photoPosition: 'center',
+    docs: [
+      { src: 'assets/img/projects/docs/toast-keraton-visit.jpg', caption: 'Requirement-gathering visit to Keraton Kasepuhan Cirebon, with Pangeran Nusantara', w: 1400, h: 788 },
+      { src: 'assets/img/projects/docs/toast-staff-interview.jpg', caption: 'Requirement interview with Keraton staff', w: 1400, h: 788 },
+      { src: 'assets/img/projects/docs/toast-analysis-session.jpg', caption: 'Requirement analysis session at CoE Smart City', w: 1400, h: 1050 }
+    ]
   },
   {
     id: 'waste-management',
@@ -363,7 +368,7 @@ const DETAILS = [
     id: 'coe-internship',
     categoryLabel: 'Internship',
     title: 'Intern — Junior System Analyst, CoE Smart City',
-    desc: 'One-year internship at the Center of Excellence Smart City, Telkom University (2024/2025 cohort). Produced UML diagrams and technical documentation for TOAST, a two-way ticketing system for Keraton Kasepuhan Cirebon built with PT Curaweda, designed UI/UX prototypes for its admin and financial modules, and analyzed requirements for an IoT-based waste classification system.',
+    desc: 'One-year internship at the Center of Excellence Smart City, Telkom University (2024/2025 cohort). Gathered requirements on site at Keraton Kasepuhan Cirebon, produced UML diagrams and technical documentation for TOAST, a two-way ticketing system built with PT Curaweda, designed UI/UX prototypes for its admin and financial modules, and analyzed requirements for an IoT-based waste classification system.',
     role: 'Junior System Analyst (intern)',
     timeline: 'Jul 2024 — Jul 2025',
     impact: 'Documentation and prototypes for TOAST; IoT waste-sorting analysis',
