@@ -208,7 +208,7 @@ const PROJECTS = [
     category: 'system-analysis',
     categoryLabel: 'System Analysis',
     title: 'PT Primaland — Multi-Project System Analysis',
-    desc: 'Sole in-house system analyst across 4 concurrent projects: the Mycozykos boarding-house platform, Hirai Hills website redesign and AI dynamic pricing, and a cross-division finance budgeting integration. I turn division needs into requirements, wireframes and UAT scenarios for PrimaTech’s 5-person development team.',
+    desc: '4 concurrent projects: Mycozykos platform, Hirai Hills website and AI pricing, finance budgeting. Requirements, wireframes and UAT for a 5-person vendor team.',
     role: 'System Analyst',
     timeline: 'Mar 2026 — Present',
     impact: '4 projects running in parallel; Cozy Mart module delivered',
@@ -225,7 +225,7 @@ const PROJECTS = [
     category: 'system-analysis',
     categoryLabel: 'System Analysis',
     title: 'Inventory Management System — Operations Division',
-    desc: 'Built from scratch for PT Primaland’s Operations division, from requirements to a live system. It tracks every asset with a photo, acquisition value and depreciation-based book value, filters by division, location and status, records sold items, and exports to Excel.',
+    desc: 'Built from scratch for the Operations division: asset photos, depreciation-based book value, division and location filters, Excel export.',
     role: 'System Analyst (end to end)',
     timeline: '2026',
     impact: 'Live and tracking 95 company assets',
@@ -242,7 +242,7 @@ const PROJECTS = [
     category: 'system-analysis',
     categoryLabel: 'System Analysis',
     title: 'TOAST — Two-Way Ticketing System',
-    desc: 'Gathered requirements on site at Keraton Kasepuhan Cirebon through stakeholder meetings and staff interviews, then turned them into the UML architecture and UI/UX prototypes for a digital ticketing platform built with PT Curaweda.',
+    desc: 'On-site requirement gathering at Keraton Kasepuhan Cirebon, turned into UML and UI/UX prototypes. Built with PT Curaweda.',
     role: 'System Analyst & UI/UX Designer',
     timeline: 'Jul 2024 – Jul 2025',
     impact: 'Deployed for Keraton Kasepuhan Cirebon w/ PT Curaweda',
@@ -264,7 +264,7 @@ const PROJECTS = [
     category: 'iot',
     categoryLabel: 'IoT & Smart Systems',
     title: 'Smart Waste Management System',
-    desc: 'Analyzed system requirements and simulated Raspberry Pi and camera placement for an AI-based (YOLO) waste classification system. The prototype was part of the Telkom University × Coimbatore Institute of Technology international short course (January 2025), where I served as Supervisor Assistant.',
+    desc: 'Requirements and Raspberry Pi camera placement for a YOLO waste classifier. Demoed at the Telkom University × CIT international short course.',
     role: 'Data & System Analyst · Supervisor Assistant',
     timeline: '2024 – 2025',
     impact: 'Live object-detection demo with international participants',
@@ -285,7 +285,7 @@ const PROJECTS = [
     category: 'ml',
     categoryLabel: 'Machine Learning',
     title: 'TANELA — Tanah Sejahtera',
-    desc: 'Built the data model and system documentation for a machine-learning web app that predicts land suitability for shallot farming in Selaawi sub-district, Garut, developed with BPP Selaawi.',
+    desc: 'Data model and documentation for an ML app predicting land suitability for shallot farming in Selaawi, Garut.',
     role: 'Machine Learning & System Analyst',
     timeline: 'Student Creativity Program (PKM-PI)',
     impact: 'Funded national student research program',
@@ -308,7 +308,7 @@ const PROJECTS = [
     category: 'uiux',
     categoryLabel: 'UI/UX Design',
     title: 'National UI/UX Design Competition',
-    desc: 'Designed a mobile app prototype using Design Thinking and UX principles for a social-impact problem statement, competing as a team in the UI/UX competition of Vocation of The Champions 2024, organised by Sekolah Vokasi, Universitas Sebelas Maret.',
+    desc: 'Mobile app prototype built with Design Thinking. 2nd place, Vocation of The Champions 2024, Sekolah Vokasi UNS.',
     role: 'UI/UX Designer (team member)',
     timeline: 'Nov 2024',
     impact: '2nd Place — Vocation of The Champions 2024, Sekolah Vokasi UNS',
@@ -332,7 +332,7 @@ const DETAILS = [
     id: 'ta-algo',
     categoryLabel: 'Teaching',
     title: 'Teaching Assistant — Algorithm and Programming',
-    desc: 'Practicum assistant for Algorithm and Programming at the Faculty of Applied Science, Telkom University. Prepared learning materials, explained programming logic to 30+ students, and helped lecturers evaluate practical assignments. The faculty rated the assistantship “Sangat Memuaskan” (Very Satisfactory).',
+    desc: 'Practicum assistant for Algorithm and Programming. Prepared materials, mentored 30+ students and helped grade assignments. Rated “Sangat Memuaskan”.',
     role: 'Teaching Assistant (part-time)',
     timeline: 'Odd Semester 2024/2025',
     impact: '30+ students mentored; rated “Very Satisfactory”',
@@ -352,7 +352,7 @@ const DETAILS = [
     id: 'lab-assistant',
     categoryLabel: 'IT Support',
     title: 'Laboratory Assistant — IT Support',
-    desc: 'Part-time laboratory assistant at the Multimedia Applied Game and Education Lab, Faculty of Applied Science, Telkom University. Managed the lab’s network, IoT and software inventory, and resolved hardware, software and network issues across 40+ lab PCs so practicum sessions could run. The faculty rated the assistantship “Sangat Baik” (Very Good).',
+    desc: 'Part-time assistant at the Multimedia Applied Game & Education Lab. Kept 40+ PCs running; managed network, IoT and software inventory. Rated “Sangat Baik”.',
     role: 'Laboratory Assistant (part-time)',
     timeline: 'Jun 2023 — Aug 2024',
     impact: '40+ lab PCs kept running; rated “Very Good”',
@@ -373,7 +373,7 @@ const DETAILS = [
     id: 'coe-internship',
     categoryLabel: 'Internship',
     title: 'Intern — Junior System Analyst, CoE Smart City',
-    desc: 'One-year internship at the Center of Excellence Smart City, Telkom University (2024/2025 cohort). Gathered requirements on site at Keraton Kasepuhan Cirebon, produced UML diagrams and technical documentation for TOAST, a two-way ticketing system built with PT Curaweda, designed UI/UX prototypes for its admin and financial modules, and analyzed requirements for an IoT-based waste classification system.',
+    desc: 'One-year internship (2024/25). On-site requirement gathering, UML and documentation for TOAST; UI/UX prototypes for its admin and finance modules; requirements for an IoT waste classifier.',
     role: 'Junior System Analyst (intern)',
     timeline: 'Jul 2024 — Jul 2025',
     impact: 'Documentation and prototypes for TOAST; IoT waste-sorting analysis',
@@ -460,7 +460,7 @@ const DEFAULT_ACCENT = '#2f6fed';
           <h3>${p.title}</h3>
           <p>${p.desc}</p>
           <div class="g-tags">${p.tags.map(t => `<span>${t}</span>`).join('')}</div>
-          ${p.docs && p.docs.length ? `<span class="g-docs">📷 Includes real documentation (${p.docs.length})</span>` : ''}
+          ${p.docs && p.docs.length ? `<span class="g-docs">📷 Documentation (${p.docs.length})</span>` : ''}
         </div>
       </article>`;
   }
