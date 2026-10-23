@@ -302,24 +302,25 @@ const PROJECTS = [
     ]
   },
   {
-    id: 'uiux-competition',
-    hidden: true, // shown in Achievements instead
+    id: 'schoolgpt',
     category: 'uiux',
     categoryLabel: 'UI/UX Design',
-    title: 'National UI/UX Design Competition',
-    desc: 'Mobile app prototype built with Design Thinking. 2nd place, Vocation of The Champions 2024, Sekolah Vokasi UNS.',
-    role: 'UI/UX Designer (team member)',
-    timeline: 'Nov 2024',
-    impact: '2nd Place — Vocation of The Champions 2024, Sekolah Vokasi UNS',
-    tags: ['Design Thinking', 'Figma', 'Prototyping'],
-    grad: 'linear-gradient(135deg,#f59e0b,#ef4444)',
-    accent: '#f59e0b',
+    title: 'SchoolGPT — AI Learning App',
+    desc: 'Mobile learning app with subject courses, practice quizzes and SCAI, an AI assistant that answers from a scanned photo. 2nd place, Vocation of The Champions 2024.',
+    role: 'UI/UX Designer (team of 3)',
+    timeline: '2024',
+    impact: '2nd place — Vocation of The Champions 2024, Sekolah Vokasi UNS',
+    tags: ['Design Thinking', 'User Flow', 'Figma', 'Prototyping'],
+    grad: 'linear-gradient(135deg,#6c4bff,#a78bfa)',
+    accent: '#6c4bff',
     chip: 'UI',
     icon: 'trophy',
-    photo: 'assets/img/projects/uiux-competition.jpg',
-    photoPosition: 'center',
+    photo: 'assets/img/projects/schoolgpt.jpg',
+    photoPosition: 'center 40%',
     docs: [
-      { src: 'assets/img/achievements/uiux-award-certificate.jpg', caption: 'Award certificate — 2nd place, issued to the team by Sekolah Vokasi UNS', w: 1353, h: 980 },
+      { src: 'assets/img/projects/docs/schoolgpt-screens.jpg', caption: 'Screen flow — sign up, home, courses, SCAI, history, profile', w: 800, h: 600 },
+      { src: 'assets/img/projects/docs/schoolgpt-mockups.jpg', caption: 'High-fidelity screens', w: 800, h: 600 },
+      { src: 'assets/img/achievements/uiux-award-certificate.jpg', caption: 'Award certificate — 2nd place, Sekolah Vokasi UNS', w: 1353, h: 980 },
       { src: 'assets/img/achievements/uiux-certificate.jpg', caption: 'The team at the Vocation of The Champions 2024 grand closing', w: 1100, h: 1466, pos: 'center 25%' }
     ]
   }
