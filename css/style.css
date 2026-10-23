@@ -123,14 +123,10 @@ input,textarea{ font-family:inherit; }
 .nav-wrap{ display:flex; align-items:center; justify-content:space-between; gap:20px; }
 
 .brand{ display:flex; align-items:center; gap:12px; font-family:var(--font-head); font-weight:700; font-size:1.05rem; }
-.brand-avatar{
-  width:40px; height:40px; border-radius:50%; object-fit:cover; flex:none;
-  border:2px solid var(--surface); box-shadow:0 0 0 1.5px var(--accent), var(--shadow-sm);
-}
 .brand-text{ display:flex; flex-direction:column; line-height:1.15; }
-.brand-name{ font-family:var(--font-head); font-weight:700; font-size:1rem; color:var(--text); letter-spacing:-.01em; white-space:nowrap; }
+.brand-name{ font-family:var(--font-head); font-weight:700; font-size:1.06rem; color:var(--text); letter-spacing:-.01em; white-space:nowrap; }
 .brand-role{ font-family:var(--font-body); font-weight:500; font-size:.74rem; color:var(--text-soft); letter-spacing:.02em; margin-top:2px; white-space:nowrap; }
-.site-footer .brand-text{ text-align:left; }
+.site-footer .brand-text{ text-align:center; align-items:center; }
 
 .nav-list{ display:flex; align-items:center; gap:6px; }
 .nav-link{
@@ -563,14 +559,10 @@ input,textarea{ font-family:inherit; }
   .hero-actions .btn{ width:100%; }
   .nav-actions .btn-sm{ width:40px; height:40px; padding:0; justify-content:center; }
   .nav-actions .btn-sm .btn-text{ display:none; }
-  .brand{ gap:9px; }
-  .brand-avatar{ width:34px; height:34px; }
 }
 
 @media (max-width: 360px){
   .nav-wrap{ gap:10px; }
   .nav-actions{ gap:6px; }
-  .brand{ gap:7px; }
-  .brand-avatar{ width:30px; height:30px; }
   .brand-name{ font-size:.92rem; }
 }
