@@ -302,10 +302,10 @@ const PROJECTS = [
     ]
   },
   {
-    id: 'schoolgpt',
+    id: 'sekolahdulu',
     category: 'uiux',
     categoryLabel: 'UI/UX Design',
-    title: 'SchoolGPT — AI Learning App',
+    title: 'Sekolahdulu — AI Learning App',
     desc: 'Mobile learning app with subject courses, practice quizzes and SCAI, an AI assistant that answers from a scanned photo.',
     role: 'UI/UX Designer (team of 3)',
     timeline: '2024',
@@ -315,13 +315,14 @@ const PROJECTS = [
     accent: '#6c4bff',
     chip: 'UI',
     icon: 'trophy',
-    photo: 'assets/img/projects/schoolgpt.jpg',
-    photoPosition: 'center 40%',
+    photo: 'assets/img/projects/sekolahdulu.jpg',
+    photoPosition: 'center',
     docs: [
-      { src: 'assets/img/projects/docs/schoolgpt-screens.jpg', caption: 'Screen flow — sign up, home, courses, SCAI, history, profile', w: 800, h: 600 },
-      { src: 'assets/img/projects/docs/schoolgpt-mockups.jpg', caption: 'High-fidelity screens', w: 800, h: 600 }
+      { src: 'assets/img/projects/docs/sekolahdulu-branding.jpg', caption: 'Final branding — Sekolahdulu', w: 1000, h: 750 },
+      { src: 'assets/img/projects/docs/sekolahdulu-screens.jpg', caption: 'Screen flow — early version, named SchoolGPT', w: 800, h: 600 },
+      { src: 'assets/img/projects/docs/sekolahdulu-mockups.jpg', caption: 'High-fidelity screens — early version, named SchoolGPT', w: 800, h: 600 }
     ]
-  },
+  },,
   {
     id: 'uiux-competition',
     hidden: true, // shown in Achievements instead
