@@ -322,7 +322,7 @@ const PROJECTS = [
       { src: 'assets/img/projects/docs/sekolahdulu-screens.jpg', caption: 'Screen flow — early version, named SchoolGPT', w: 800, h: 600 },
       { src: 'assets/img/projects/docs/sekolahdulu-mockups.jpg', caption: 'High-fidelity screens — early version, named SchoolGPT', w: 800, h: 600 }
     ]
-  },,
+  },
   {
     id: 'uiux-competition',
     hidden: true, // shown in Achievements instead
