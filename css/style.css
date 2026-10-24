@@ -403,6 +403,9 @@ input,textarea{ font-family:inherit; }
 }
 .achievement-photo:hover img{ transform:scale(1.05); }
 .achievement-photo:hover .achievement-photo-view{ opacity:1; transform:translateY(0); }
+.achievement-card.is-wide{ grid-column:1 / -1; display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,1fr); }
+.achievement-card.is-wide .achievement-photo{ aspect-ratio:auto; height:100%; min-height:260px; }
+.achievement-card.is-wide .achievement-body{ display:flex; flex-direction:column; justify-content:center; }
 
 /* ---------- Contact ---------- */
 .contact-grid{ display:grid; grid-template-columns:.85fr 1.15fr; gap:56px; }
@@ -517,6 +520,8 @@ input,textarea{ font-family:inherit; }
   .skills-grid{ grid-template-columns:repeat(2, 1fr); }
   .gallery{ grid-template-columns:repeat(2, 1fr); }
   .testimonial-grid{ grid-template-columns:1fr; }
+  .achievement-card.is-wide{ display:block; }
+  .achievement-card.is-wide .achievement-photo{ aspect-ratio:16/9; height:auto; min-height:0; }
 }
 
 @media (max-width: 940px){
