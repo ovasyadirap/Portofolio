@@ -406,6 +406,24 @@ const DETAILS = [
       { src: 'assets/img/achievements/docs/coe-smart-city-team.jpg', caption: 'CoE Smart City 2024/25 team, Telkom University', w: 1400, h: 1050 }
     ]
   }
+,
+  {
+    id: 'myskill-bootcamp',
+    categoryLabel: 'Certification',
+    title: 'UI/UX Research & Design: Fullstack Intensive Bootcamp',
+    desc: 'Intensive bootcamp by MySkill covering the full UX process, from user research and customer journey mapping to wireframes, prototyping and usability testing.',
+    role: 'Participant (Batch 26)',
+    timeline: 'Mar 15 — Apr 23, 2026',
+    impact: 'Certificate of completion · ID MS-29/4/2026-JMZbecprjYXcwrBdlOpZ',
+    tags: ['User Research', 'Customer Journey Map', 'Information Architecture', 'Usability Testing', 'Figma'],
+    grad: 'linear-gradient(135deg,#0f4c5c,#17c3b2)',
+    photo: 'assets/img/achievements/myskill-bootcamp-certificate.jpg',
+    photoPosition: 'center',
+    docs: [
+      { src: 'assets/img/achievements/myskill-bootcamp-certificate.jpg', caption: 'Certificate of completion', w: 1400, h: 788 },
+      { src: 'assets/img/achievements/docs/myskill-bootcamp-topics.jpg', caption: 'Bootcamp topics', w: 1400, h: 788 }
+    ]
+  }
 ];
 
 const ICONS = {
